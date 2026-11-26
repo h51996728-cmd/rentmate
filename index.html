@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f5ef" />
+    <title>RentMate — Tools that work for you</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="RentMate home"><span class="brand-mark">R</span><span>rentmate<span class="brand-dot">.</span></span></a>
+      <nav class="desktop-nav" aria-label="Primary navigation"><a href="#explore">Explore</a><a href="#how-it-works">How it works</a><a href="#safety">Safety</a></nav>
+      <div class="header-actions"><button class="text-button" id="list-button">List your equipment</button><button class="avatar-button" id="account-button" aria-label="Open login">AK</button></div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span> Now serving Nadiad, Gujarat</p>
+          <h1>Get the job done.<br /><em>Without owning it.</em></h1>
+          <p class="hero-text">Rent reliable gardening and construction equipment from people and businesses near you.</p>
+          <div class="search-box" role="search">
+            <span class="search-icon">⌕</span><input id="search-input" type="search" placeholder="What do you need today?" aria-label="Search equipment" /><span class="search-location">⌖ Nadiad <span class="chevron">⌄</span></span><button id="search-button" class="search-button">Search</button>
+          </div>
+          <div class="popular"><span>Popular:</span><button data-search="Drill">Drill</button><button data-search="Lawn mower">Lawn mower</button><button data-search="Concrete mixer">Concrete mixer</button></div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of equipment rental">
+          <div class="sun"></div><div class="hero-card card-back"></div><div class="hero-card card-front"><div class="mini-label">AVAILABLE NEAR YOU</div><div class="tool-illustration">⚙</div><div class="hero-card-title">Power tools<br /><span>ready when you are</span></div><div class="hero-card-footer"><span>From ₹199/day</span><span class="arrow">↗</span></div></div><div class="leaf leaf-one">⌁</div><div class="leaf leaf-two">⌁</div>
+        </div>
+      </section>
+
+      <section class="category-strip" id="explore"><div class="section-heading"><div><p class="eyebrow">FIND YOUR FIT</p><h2>What are you working on?</h2></div><button class="outline-button" id="all-categories">View all categories <span>→</span></button></div><div class="category-grid"><button class="category active" data-category="All"><span class="category-icon">✦</span><span>All equipment</span><small>24 listings</small></button><button class="category" data-category="Gardening"><span class="category-icon green">✾</span><span>Gardening</span><small>12 listings</small></button><button class="category" data-category="Construction"><span class="category-icon orange">▦</span><span>Construction</span><small>12 listings</small></button><button class="category" data-category="Popular"><span class="category-icon purple">⌁</span><span>Popular near you</span><small>8 listings</small></button></div></section>
+
+      <section class="listings-section"><div class="section-heading listing-heading"><div><p class="eyebrow">NEARBY RENTALS</p><h2 id="results-title">Equipment people love</h2></div><div class="sort-control">Sort by <select id="sort-select" aria-label="Sort listings"><option value="recommended">Recommended</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select></div></div><div class="listing-grid" id="listing-grid"></div><div class="empty-state" id="empty-state" hidden><div>⌕</div><h3>No equipment found</h3><p>Try another search or browse all equipment.</p></div></section>
+
+      <section class="how-section" id="how-it-works"><div><p class="eyebrow">SIMPLE FROM START TO FINISH</p><h2>Renting should be<br /><em>easy.</em></h2></div><div class="steps"><div class="step"><span>01</span><h3>Find what you need</h3><p>Search equipment available around Nadiad and compare prices.</p></div><div class="step"><span>02</span><h3>Book with confidence</h3><p>See transparent pricing, owner ratings, and real availability.</p></div><div class="step"><span>03</span><h3>Make it happen</h3><p>Pick up locally or arrange delivery. Get the job done.</p></div></div></section>
+
+      <section class="trust-section" id="safety"><div class="trust-badge">✓</div><div><p class="eyebrow">BUILT FOR YOUR PEACE OF MIND</p><h2>Good tools.<br />Good people.</h2><p>Every listing is reviewed, every owner is verified, and every booking is supported by our local team.</p></div><div class="trust-stats"><div><strong>100%</strong><span>Transparent pricing</span></div><div><strong>24/7</strong><span>Booking support</span></div></div></section>
+    </main>
+
+    <footer><div class="brand"><span class="brand-mark">R</span><span>rentmate<span class="brand-dot">.</span></span></div><span>Built for Nadiad, made for getting things done.</span><span>© 2026 RentMate</span></footer>
+    <div class="modal-backdrop" id="modal" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" id="modal-close" aria-label="Close">×</button><p class="eyebrow">GROW WITH RENTMATE</p><h2 id="modal-title">List your equipment</h2><p>Have a tool sitting idle? Turn it into extra income by listing it for people in Nadiad.</p><form id="list-form"><label>Product photo<input id="listing-photo" type="file" accept="image/*" required /></label><div id="photo-preview" class="photo-preview" hidden></div><label>Equipment name<input id="listing-name" required placeholder="e.g. Bosch angle grinder" /></label><label>Category<select id="listing-category" required><option value="">Choose a category</option><option>Gardening</option><option>Construction</option></select></label><label>Rent amount per day (₹)<input id="listing-rent" type="number" min="1" required placeholder="e.g. 300" /></label><label>Refundable security deposit (₹)<input id="listing-deposit" type="number" min="0" required placeholder="e.g. 1000" /></label><label>Pickup address in Nadiad<input id="listing-address" required placeholder="Address shared only after payment" /></label><button class="primary-button" type="submit">Publish equipment <span>→</span></button></form></div></div>
+    <div class="modal-backdrop" id="product-modal" hidden><div class="product-modal" role="dialog" aria-modal="true" aria-labelledby="product-title"><button class="modal-close" id="product-close" aria-label="Close">×</button><div class="product-modal-image" id="product-image"></div><div class="product-modal-body"><div class="listing-top"><span class="listing-category" id="product-category"></span><span class="rating" id="product-rating"></span></div><h2 id="product-title"></h2><p class="owner" id="product-owner"></p><p class="product-description">Reliable, well-maintained equipment available for pickup in Nadiad. Check the dates below to see the rental total.</p><div class="booking-fields"><label>Pickup date<input id="pickup-date" type="date" required /></label><label>Return date<input id="return-date" type="date" required /></label></div><div class="booking-summary"><span><strong id="product-price"></strong> / day<br /><small>Refundable deposit: <span id="product-deposit"></span></small></span><button class="primary-button" id="book-button" type="button">Continue to payment <span>→</span></button></div><p class="booking-note">Owner’s exact pickup address is revealed after payment.</p><div id="payment-panel" class="payment-panel" hidden></div><button class="primary-button pay-button" id="confirm-payment" type="button" hidden>Pay securely <span>→</span></button><div id="address-unlock" class="address-unlock" hidden></div></div></div></div>
+    <div class="modal-backdrop" id="login-modal" hidden><div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="login-title"><button class="modal-close" id="login-close" aria-label="Close">×</button><div class="auth-logo"><span class="brand-mark">R</span></div><p class="eyebrow">WELCOME TO RENTMATE</p><h2 id="login-title">Rent more.<br /><em>Own less.</em></h2><p class="auth-intro">Sign in to book equipment, save favourites, and manage your listings.</p><form id="login-form"><label>Mobile number<div class="phone-input"><span>+91</span><input id="phone-number" type="tel" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" placeholder="98765 43210" required /></div></label><button class="primary-button" type="submit">Continue with mobile <span>→</span></button></form><div class="auth-divider"><span>or</span></div><button class="social-button" id="google-login" type="button"><span class="google-g">G</span> Continue with Google</button><p class="auth-terms">By continuing, you agree to our <a href="#safety">Terms</a> and <a href="#safety">Privacy Policy</a>.</p></div></div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
