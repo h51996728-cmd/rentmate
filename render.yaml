@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: rentmate-nadiad
+    runtime: docker
+    plan: starter
+    region: singapore
+    healthCheckPath: /
+    disk:
+      name: rentmate-listings
+      mountPath: /var/data
+      sizeGB: 1
